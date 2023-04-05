@@ -20,9 +20,20 @@ local sources = {
 
   --python
   b.formatting.black,
+  b.diagnostics.flake8,
+
+  --go
+  b.formatting.gofumpt
 }
 
 null_ls.setup {
   debug = true,
   sources = sources,
+  on_attach = function()
+    vim.api.nvim_create_autocmd("BufWritePost", {
+      callback = function()
+        vim.lsp.buf.format()
+      end,
+    })
+  end,
 }
