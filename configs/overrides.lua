@@ -11,12 +11,12 @@ M.treesitter = {
     "markdown",
     "markdown_inline",
     "python",
-    "go"
+    "go",
   },
   indent = {
     enable = true,
     disable = {
-      "python"
+      "python",
     },
   },
 }
@@ -33,7 +33,10 @@ M.mason = {
     "typescript-language-server",
     "deno",
     "gopls",
-    "pyright"
+    "pyright",
+    "svelte",
+    "emmet",
+    "rust_analyzer",
   },
 }
 
@@ -55,10 +58,10 @@ M.nvimtree = {
 
 M.refactoring = {
   prompt_func_return_type = {
-    go = true
+    go = true,
   },
   prompt_func_param_type = {
-    go = true
-  }
+    go = true,
+  },
 }
 return M
